@@ -1,0 +1,132 @@
+---
+layout: post
+# layout: "contest"
+date: 2025-01-14
+author: "Geekle AI Challenges"
+title: "LSPSearchAPI Contest: Implement Code Search Functionalities"
+description: "This task involves implementing the LSPSearchAPI interface, which defines core methods for LSP-compatible code search functionalities. Each method in the interface is designed to handle specific use cases for searching and navigating within a workspace."
+categories: 
+  - "Contests"
+  - "Challenges"
+keywords:
+  - "code search"
+  - "developer competition"
+  - "LSP"
+  - "typescript"
+  - "javascript"
+  - "tree-sitter"
+  - "zoekt"
+contact_email: "contests@geekle.ai"
+---
+
+## Overview
+This task involves implementing the LSPSearchAPI interface, which defines core methods for LSP-compatible code search functionalities. Each method in the interface is designed to handle specific use cases for searching, and navigating, within a workspace. 
+
+## Task
+
+Supported languages:
+- typescript/javascript 
+
+#### Code Reference:
+```python
+
+from abc import ABC, abstractmethod
+from typing import List, Dict, Optional
+
+
+class LSPSearchAPI(ABC):
+   """
+   Abstract base class for an LSP search API.
+   """
+
+
+   @abstractmethod
+   def find_definition(self, symbol: str) -> Optional[Dict]:
+       """
+       Find the definition of a symbol.
+       :param symbol: The symbol name to search for.
+       :return: A dictionary with the definition location, or None if not found.
+       """
+       pass
+
+
+   @abstractmethod
+   def find_references(self, symbol: str) -> List[Dict]:
+       """
+       Find all references to a symbol.
+       :param symbol: The symbol name to search for.
+       :return: A list of references with their locations.
+       """
+       pass
+
+
+   @abstractmethod
+   def search_workspace(self, query: str) -> List[Dict]:
+       """
+       Search for occurrences of a query string across the workspace.
+       :param query: The query string.
+       :return: A list of search results.
+       """
+       pass
+
+
+   @abstractmethod
+   def highlight_document(self, file_path: str, symbol: str) -> List[Dict]:
+       """
+       Highlight occurrences of a symbol in a specific document.
+       :param file_path: The path of the file to search within.
+       :param symbol: The symbol to highlight.
+       :return: A list of positions where the symbol occurs.
+       """
+       pass
+
+
+   @abstractmethod
+   def find_implementations(self, interface_name: str) -> List[Dict]:
+       """
+       Find implementations of an interface or abstract method.
+       :param interface_name: The name of the interface or abstract method.
+       :return: A list of implementation locations.
+       """
+       pass
+
+
+   @abstractmethod
+   def get_symbols(self, query: str) -> List[Dict]:
+       """
+       Retrieve symbols matching a query across the workspace.
+       :param query: The symbol name or query to search for.
+       :return: A list of matching symbols with metadata.
+       """
+       pass
+
+
+   @abstractmethod
+   def find_files_by_name(self, file_name: str) -> List[Dict]:
+       """
+       Find files by their name.
+       :param file_name: The name of the file to search for.
+       :return: A list of matching file paths.
+       """
+       pass
+```
+
+## Deliverables
+
+Here’s a table organizing the tasks for each method and indexing them as separate deliverables. This can include all necessary codebase indexing or preparations. 
+
+Databases and other tools are welcome. This is not an algorithmic task but rather “we need this functionality whatever under the hood.”
+
+Tips: tree-sitter or zoekt 
+
+This is acceptable to deliver at least 2 tasks. 
+
+| Task | Method                          | Description                                                     | Deliverable                                     |
+|------|----------------------------------|-----------------------------------------------------------------|------------------------------------------------|
+| 1    | `find_definition(symbol)`       | Locate the definition of the given symbol in the codebase.      | Implement method, unit tests, documentation, example usage. |
+| 2    | `find_references(symbol)`       | Retrieve all references to the given symbol across the workspace.| Implement method, unit tests, documentation, example usage. |
+| 3    | `search_workspace(query)`       | Perform a workspace-wide search for the given query.            | Implement method, unit tests, documentation, example usage. |
+| 4    | `highlight_document(file, symbol)` | Highlight all occurrences of a symbol in a specific document.   | Implement method, unit tests, documentation, example usage. |
+| 5    | `find_implementations(interface)` | Identify all implementations of a specified interface or abstract method. | Implement method, unit tests, documentation, example usage. |
+| 6    | `get_symbols(query)`            | Retrieve all symbols matching the query along with metadata.    | Implement method, unit tests, documentation, example usage. |
+| 7    | `find_files_by_name(file_name)` | Locate files by their names within the workspace.               | Implement method, unit tests, documentation, example usage. |
