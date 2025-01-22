@@ -6,7 +6,6 @@ author: "Geekle AI Challenges"
 title: "LSPSearchAPI Contest: Implement Code Search Functionalities"
 description: "This task involves implementing the LSPSearchAPI interface, which defines core methods for LSP-compatible code search functionalities. Each method in the interface is designed to handle specific use cases for searching and navigating within a workspace."
 categories: 
-  - "Contests"
   - "Challenges"
 keywords:
   - "code search"
@@ -19,10 +18,10 @@ keywords:
 contact_email: "contests@geekle.ai"
 ---
 
-## Overview
+# Overview
 This task involves implementing the LSPSearchAPI interface, which defines core methods for LSP-compatible code search functionalities. Each method in the interface is designed to handle specific use cases for searching, and navigating, within a workspace. 
 
-## Task
+# Task
 
 Supported languages:
 - typescript/javascript 
@@ -111,7 +110,7 @@ class LSPSearchAPI(ABC):
        pass
 ```
 
-## Deliverables
+# Deliverables
 
 Here’s a table organizing the tasks for each method and indexing them as separate deliverables. This can include all necessary codebase indexing or preparations. 
 
