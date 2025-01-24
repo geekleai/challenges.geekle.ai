@@ -12,11 +12,11 @@ keywords:
 <article itemscope="" itemtype="http://schema.org/Blog">
 {% for post in paginator.posts %}
   <div class="front" itemprop="blogPosts" itemscope="" itemtype="http://schema.org/BlogPosting">
-    <h1>
+    <h2>
       <a href="{{ post.url }}">
-        <span itemprop="name headline mainEntityOfPage">{{ post.title }}</span>
+        <span itemprop="name headline mainEntityOfPage">{{ post.ticket }}: {{ post.title }}</span>
       </a>
-    </h1>
+    </h2>
     <ul class="subline">
       <li>
         <time itemprop="author">
