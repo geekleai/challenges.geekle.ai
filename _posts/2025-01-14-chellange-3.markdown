@@ -2,7 +2,7 @@
 layout: post
 # layout: "contest"
 date: 2025-01-14
-author: "Geekle AI Challenges"
+author: "geekleai"
 title: "LSPSearchAPI Contest: Implement Code Search Functionalities"
 description: "This task involves implementing the LSPSearchAPI interface, which defines core methods for LSP-compatible code search functionalities. Each method in the interface is designed to handle specific use cases for searching and navigating within a workspace."
 categories: 

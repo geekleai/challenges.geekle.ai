@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<article itemscope="" itemtype="http://schema.org/BlogPosting">
+  <h1 itemprop="name headline mainEntityOfPage">{{ page.title }}</h1>
+  <ul class="subline">
+    <li>
+      <time itemprop="author">
+        <a href="https://github.com/{{ page.author }}">@{{ page.author }}</a>
+      </time>
+    </li>
+  </ul>
+  {{ content }}
+
+</article>
